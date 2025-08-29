@@ -22,17 +22,17 @@
 - **comprehensive unit tests** including prompt injection
 - **Python --args** to run customized script via CLI
 - **mypy, pytest, ruff** to check for code quality
-- **LLM hyperparameters** to improve accuracy of spam detection
-- **LLM evaluation**
+- **LLM hyperparameters** tuning to improve accuracy of spam detection
+- **LLM evaluation** maybe using a more powerful LLM as a judge
 
 ## Errors I found in the provided script
-- Line 0: Missing imports: openai, json
-- Line 1: | None - I understand that we don't want None on the output
-- Line 2: unnecessary \ backslash
-- Line 7 to 10: Instructions and output type inside json payload, what is wrong: think step by step and bool/str
-- Line 7 to 10: examples should have explicit True/False in the JSON payload, bool only in the in the instructions, outside JSON
-- Line 7 to 10: invalid JSON format in the example: missing comma in structure + prompt instructions inside JSON format
-- Line 7 to 10: should be valid JSON as example:
+- Line 0: There are missing imports: openai, json
+- Line 1: | None - (or None) I understand that we don't want None on the output, so I removed it
+- Line 2: unnecessary \ backslash inside string
+- Line 7 to 10: Instructions and output type inside json payload, what is wrong. "Think step by step" and "bool/str" should be in the instructions
+- Line 7 to 10: Examples should have explicit True/False in the JSON payload, bool/str only in the in the instructions, outside JSON
+- Line 7 to 10: There is an invalid JSON format in the example: missing comma in structure, and prompt instructions inside JSON format
+- Line 7 to 10: Should have a valid JSON as an example:
 {
 "is_spam": True,
 "reason": "because offers a deal"
@@ -44,7 +44,7 @@
 - Line 14: I would add async according to my previous experience at Zendata, for production-level code
 - Line 23: 'res' is not a proper name for a variable, as it does not have any meaning
 - Line 24: 'if' is useless, also because else is not being used
-- Line 25: json loads would be enough, to load a valid JSON
+- Line 25: json loads would be enough, to load (and check for) a valid JSON
 
 ## How to run the code
 
