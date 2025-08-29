@@ -22,7 +22,8 @@
 - **comprehensive unit tests** including prompt injection
 - **Python --args** to run customized script via CLI
 - **mypy, pytest, ruff** to check for code quality
-
+- **LLM hyperparameters** to improve accuracy of spam detection
+- **LLM evaluation**
 
 ## Errors I found in the provided script
 - Line 0: Missing imports: openai, json
@@ -39,7 +40,7 @@
 - Line 14: OpenAI client not defined
 - Line 16: system message not defined
 - Line 14: No OpenAI API Key
-- Line 14: No explicit definition that we want the output as a JSON, and not text (response_format)
+- Line 14: No explicit definition that we want the output as a JSON, and not text (response_format variable added)
 - Line 14: I would add async according to my previous experience at Zendata, for production-level code
 - Line 23: 'res' is not a proper name for a variable, as it does not have any meaning
 - Line 24: 'if' is useless, also because else is not being used

@@ -20,14 +20,7 @@ class TestPrompts(Spam):
 
 
 if __name__=="__main__":
-    email = "hi how r u bro i have million dollar deal just sign here"
     spam=Spam()
-    result = spam.check_spam(email)
-
-    try:
-        print(json.loads(result))
-    except Exception as e:
-        print("Not valid JSON, REASON: ",e)
 
     examples = [
     "URGENT! 🚨 You've WON a prize! 🏆 Click here!",
