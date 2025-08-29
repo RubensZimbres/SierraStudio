@@ -28,10 +28,10 @@
 - Line 0: Missing imports: openai, json
 - Line 1: | None - I understand that we don't want None on the output
 - Line 2: unnecessary \ backslash
-- Line 7: Instructions and output type inside json payload, what is wrong: think step by step and bool/str
-- Line 7: examples should have explicit True/False in the JSON payload, bool only in the in the instructions, outside JSON
-- Line 7: invalid JSON format in the example: missing comma in structure + prompt instructions inside JSON format
-- Line 7: should be valid JSON as example:
+- Line 7 to 10: Instructions and output type inside json payload, what is wrong: think step by step and bool/str
+- Line 7 to 10: examples should have explicit True/False in the JSON payload, bool only in the in the instructions, outside JSON
+- Line 7 to 10: invalid JSON format in the example: missing comma in structure + prompt instructions inside JSON format
+- Line 7 to 10: should be valid JSON as example:
 {
 "is_spam": True,
 "reason": "because offers a deal"
