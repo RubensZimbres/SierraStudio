@@ -13,14 +13,14 @@
 
 ## Unit tests, edge cases
 - For the sake of simplicity and speed, I created only two unit tests, to check for:
-**Valid JSON**
-**Test the detection**
+- **Valid JSON**
+- **Test the detection**
 
 ## What I would improve:
 - Besides the code provided and suggestions, I would implement:
 - **async** for production level code
-- **comprehensive unit tests** in a notebook separated from main script, including prompt injection
-- **Python --args** to run the script via CLI
+- **comprehensive unit tests** including prompt injection
+- **Python --args** to run customized script via CLI
 - **mypy, pytest, ruff** to check for code quality
 
 
